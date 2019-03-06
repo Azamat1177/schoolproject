@@ -1,0 +1,37 @@
+<html>
+<head>
+	<title>WeitwurfUmrechner</title>
+	<meta charset="utf-8">
+
+	<script>
+	
+
+	
+	var g = "9.18" ;
+	var v0 = prompt("Anfangsgeschwindigkeit:");
+	var grad = prompt("Abwurfwinkel");
+	// Umrechnung Grandmaß in Bogenmaß
+	var rad = grad*Math.PI/180;
+	
+	
+	var wurfweite =  v0*v0*Math.sin(2*rad)/g;
+
+	// Runden auf 2 Nachkommastellen
+	var gerundeteWeite = Math.round(wurfweite*100)/100;
+	
+	// Ergebnis als Text ausgeben
+	var ergebnisText = "Die Weite ist" + wurfweite;
+	
+	alert(ergebnisTex);	
+
+	//alert(gerundeteWeite)	
+	</script>
+	
+	</head>
+
+<body>
+<h1>Weitwurf</h1>
+
+</body>
+
+</html>

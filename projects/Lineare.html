@@ -1,0 +1,50 @@
+<html>
+<head>
+<meta charset="utf-8">
+		
+<script>
+
+function eigenschaften() {
+
+	var ausgabeText = "";
+	var k = parseInt(document.getElementById("k").value);
+	var q = parseInt(document.getElementById("q").value);
+	
+	var eigenschaften = y=k*x+d;
+	//eigenschaften = Math.pow(p/2, 2) - q;
+	
+	if(diskriminante < 0) {
+		//Diskriminante ist kleiner 0 => keine Lösung
+		ausgabeText = "Es gibt keine Lösung in den reellen Zahlen";
+	}
+	if(diskriminante == 0) {
+		//alert("Diskriminante ist gleich 0");
+		var loesung = -p/2;
+		ausgabeText = "Das Ergebnis ist " + loesung;
+	}
+	if(diskriminante > 0) {
+		//Diskriminante ist größer 0 => 2 Lösungen
+		var k = ;
+		var d = ;
+		ausgabeText = "Lösungen: x1 = " + x1 + "; x2 = " + x2;
+	}
+	
+	document.getElementById("loesung").innerHTML = ausgabeText;
+	
+}
+
+</script>
+</head>
+	
+<body>
+<h1>Lineare Funktion</h1>
+y =  <input type="text" id="p" style="width:40"> *  x 
+ + <input type="text" id="q" style="width:40"> 
+<br><br>
+<input type="button" value="Eigenschaften" onclick="eigenschaften()">
+<br>
+<p id="loesung"> ... </p>
+
+</body>
+	
+</html>

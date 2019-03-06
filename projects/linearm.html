@@ -1,0 +1,47 @@
+<html>
+<head>
+<meta charset="utf-8">
+		
+<script>
+
+function eigenschaften() {
+
+	var ausgabeText = "";
+	var k = parseInt(document.getElementById("k").value);
+	var q = parseInt(document.getElementById("q").value);
+	
+	document.getElementById("ausgabe").innerHTML = "y = " + k + "x + 0 ";
+	var eigenschaften = y=k*x+d;
+	if(k<0) {		
+		ausgabeText = "Die Funktion ist streng monoton fallend!";
+	}
+	if(d == 0) {	
+		ausgabeText += "Die Funktion geht durch den Punkt (0|0)!";
+	}
+	if(d>0) {		
+		ausgabeText = "Die Funktion schneidet die y-Achse im positiven y-Bereich!";
+	}
+	if(k>0) {	
+		ausgabeText = "Die Funktion ist streng monoton steigend";
+	}
+	
+	document.getElementById("eigenschaften").innerHTML = eigenschaften;
+	
+}
+
+</script>
+</head>
+	
+<body>
+<h1>Lineare Funktion</h1>
+y =  <input type="text" id="p" style="width:40"> *  x 
+ + <input type="text" id="q" style="width:40"> 
+<br><br>
+<input type="button" value="Eigenschaften" onclick="eigenschaften()">
+<br>
+<p id="eigenschaften"> ... </p>
+
+</body>
+	
+</html>
+</html>
