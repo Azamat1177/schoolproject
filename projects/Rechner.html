@@ -1,0 +1,69 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Funktionen</title>
+	<style>
+body {
+  background-color: lightblue;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+}
+
+p {
+  font-family: verdana;
+  font-size: 20px;
+}
+</style>
+</head>
+<script>
+function addition() { 
+	var wert1 = document.getElementById("eingabe1").value;
+	wert1 = parseInt(wert1);
+	var wert2 = document.getElementById("eingabe2").value;
+	wert2 = parseInt(wert2);
+	var ergebnis = wert1 + wert2;
+	document.getElementById("ausgabe").innerHTML = ergebnis;
+}
+function subtraktion() { 
+	var wert1 = document.getElementById("eingabe1").value;
+	wert1 = parseInt(wert1);
+	var wert2 = document.getElementById("eingabe2").value;
+	wert2 = parseInt(wert2);
+	var ergebnis = wert1 - wert2;
+	document.getElementById("ausgabe").innerHTML = ergebnis;
+}
+function multiplizieren() { 
+	var wert1 = document.getElementById("eingabe1").value;
+	wert1 = parseInt(wert1);
+	var wert2 = document.getElementById("eingabe2").value;
+	wert2 = parseInt(wert2);
+	var ergebnis = wert1 * wert2;
+	document.getElementById("ausgabe").innerHTML = ergebnis;
+}
+function division() { 
+	var wert1 = document.getElementById("eingabe1").value;
+	wert1 = parseInt(wert1);
+	var wert2 = document.getElementById("eingabe2").value;
+	wert2 = parseInt(wert2);
+	var ergebnis = wert1 / wert2;
+	document.getElementById("ausgabe").innerHTML = ergebnis;
+}</script>	
+</head>
+<body>
+<h1>Rechner</h1>
+<p>Tippen Sie ein...</p>
+<input type="text" id="eingabe1">
+<input type="text" id="eingabe2">
+<br><br>
+
+<input type="button" value="+" onclick="addition()">
+<input type="button" value="-" onclick="subtraktion()">
+<input type="button" value="*" onclick="multiplizieren()">
+<input type="button" value="/" onclick="division()"><br>
+<p id="ausgabe">Hier kommt die Ausgabe ...</p>
+</body>
+</html>
+
