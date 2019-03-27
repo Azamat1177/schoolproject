@@ -1,0 +1,48 @@
+<html>
+<head>
+	<title>Ziffernsumme</title>
+		<meta charset="utf-8">
+			<style>
+				body {
+				  background-color:#f7e2be;
+				}
+				h1 {
+				  color: black;
+				  text-align: auto;
+				}
+				p {
+				  font-family: verdana;
+				  font-size: 20px;
+				}
+			</style>		
+				<script>
+				
+			function plus() { 
+				var zahl = parseInt(document.getElementById("eingabe").value); 
+					
+					var summe = 0;
+				
+				while(zahl != 0) {	
+				summe += summe + zahl%10;
+				
+				zahl = Math.floor(zahl/10);
+				
+				
+					}
+						
+			document.getElementById("ausgabe").innerHTML = 
+			"Die Quersumme beträgt " + summe + ". ";					
+						
+					}
+						
+				</script>
+</head>
+<body>
+<h1>Ziffernsumme</h1>
+
+<input type="text" id="eingabe"/>
+	
+<input type="button" value="Summieren" onclick="plus()"/>
+<p id="ausgabe">Hier kommt die Ausgabe ...</p>
+</body>
+</html>
