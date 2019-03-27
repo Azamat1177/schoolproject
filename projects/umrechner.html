@@ -1,0 +1,364 @@
+<html>
+<head>
+<title>Umrechner</title>
+<style>
+				body {
+				  background-color:#f7e2be;
+				}
+				h1 {
+				  color: black;
+				  text-align: auto;
+				}
+				p {
+				  font-family: verdana;
+				  font-size: 20px;
+				}
+</style>		
+<script>
+
+
+function dezBin() {
+				var zahl = parseInt(document.getElementById("eingabe1").value); 
+				
+				var erg = [];
+				while(zahl>0){
+				
+				var rest = zahl%2;
+				erg.splice(0, 0, rest);
+				zahl = Math.floor(zahl/2);
+				}
+				
+				document.getElementById("ausgabe1").innerHTML = erg.join("");
+				}
+	function binDez() {
+	var eingabe = document.getElementById("eingabe2").value;
+	
+	var ergebnis = 0;
+		for(var i = 0; i < eingabe.length; i++) {
+		ergebnis += parseInt(eingabe.charAt(i)) * Math.pow(2, eingabe.length - i - 1);
+		
+		}
+		document.getElementById("ausgabe2").innerHTML = ergebnis;
+		
+		} 
+
+		function dezHex() {
+				var zahl = parseInt(document.getElementById("eingabe3").value); 
+				
+				var erg = [];
+				while(zahl>0){
+				
+				var rest = zahl%16;
+				rest= dezHexChar(rest); 
+				erg.splice(0, 0, rest);
+				zahl = Math.floor(zahl/16);
+				
+							}
+				
+			 document.getElementById("ausgabe3").innerHTML = erg.join(""); 
+				}
+				
+
+		
+function dezHexChar(dez) {
+					
+					if(dez == 10) {
+					return "A";
+					}
+					else if(dez == 11) {
+					return "B";
+					}
+					else if(dez == 12) {
+					return "C";
+					}
+					else if(dez == 13) {
+					return "D";
+					}
+					else if(dez == 14) {
+					return "E";
+					}
+					else if(dez == 15) {
+					return "F";
+					}
+					else if(dez == 16) {
+					return "10";
+					} 
+					return dez;
+				
+				}	
+				
+
+				function hexDez() {
+				var eingabe = document.getElementById("eingabe4").value;
+	
+		var ergebnis = 0;
+		for(var i = 0; i < eingabe.length; i++) {
+		var wert = hexDezChar(eingabe.charAt(i));
+		ergebnis += wert * Math.pow(16, eingabe.length - i - 1);
+		
+		}
+		document.getElementById("ausgabe4").innerHTML = ergebnis;
+		
+		} 
+				function hexDezChar(hex) {
+					
+					if(hex == "A") {
+					return 10;
+					}
+					else if(hex == "B") {
+					return 11;
+					}
+					else if(hex == "C") {
+					return 12;
+					}
+					else if(hex == "D") {
+					return 13;
+					}
+					else if(hex == "E") {
+					return 14;
+					}
+					else if(hex == "F") {
+					return 15;
+					}
+					else if(hex == "10") {
+					return 16;
+					} 
+					return parseInt(hex);
+				
+				}	
+				
+				
+
+	
+
+</script>
+</head> 
+<body> 
+<h1>Umrechner</h1> 
+<input type="text" id="eingabe1"/> 
+<input type="button" value="Berechne Binärzahl" onclick=" dezBin()"/> 
+<p id="ausgabe1">Hier kommt die Binärzahl ...</p> <br>
+
+<input type="text" id="eingabe2"/> 
+<input type="button" value="Berechne Dezimalzahl" onclick=" binDez()"/> 
+<p id="ausgabe2">Hier kommt die Dezimalzahl ...</p>  <br>
+
+
+<input type="text" id="eingabe3"/> 
+<input type="button" value="Berechne Hexadezimalzahl" onclick=" dezHex()"/> 
+<p id="ausgabe3">Hier kommt die Hexadezimalzahl ...</p> <br>
+
+
+<input type="text" id="eingabe4"/> 
+<input type="button" value="Berechne Hexadezimalzahl" onclick=" hexDez()"/> 
+<p id="ausgabe4">Hier kommt die Hexadezimalzahl ...</p> 
+</body> 
+</html> 
+
+
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				<!-- function berechnen(zahl) { -->
+<!-- var div; -->
+<!-- var quotient;  -->
+<!-- var rest; -->
+<!-- var  i; -->
+<!-- var erg; -->
+<!-- var bin = new Array(); -->
+	<!-- erg=""; -->
+	<!-- div=2; -->
+	<!-- i=0; -->
+
+<!-- } -->
+<!-- function inBinaer() { -->
+	<!-- quotient=parseInt(zahl/div); -->
+	<!-- rest=zahl%div; -->
+	<!-- zahl=qutotient; -->
+	<!-- bin[i] = rest; -->
+	<!-- i++; -->
+	<!-- } while(quotient!=0); -->
+	<!-- i=i-1; -->
+	<!-- for (i; i >= 0; i--) -->
+	<!-- { -->
+		<!-- erg = erg + bin[i] + " "; -->
+	<!-- } -->
+	<!-- window.document.binaryberechnen.erg.value = erg; -->
+<!-- } -->
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<!-- var zahl = parseInt(document.getElementById("eingabe1").value);  -->
+					
+	<!-- var zahl = 0; -->
+	<!-- while(zahl != 0) {	 -->
+		<!-- ergebnis += zahl%2; -->
+		<!-- ergebnis = Math.floor(zahl%2); -->
+	<!-- } -->
+	<!-- document.getElementById("ausgabe1").innerHTML =  + ergebnis + ". ";		 -->
+<!-- } -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <html> -->
+<!-- <head> -->
+	<!-- <title>Ziffernsumme</title> -->
+		<!-- <meta charset="utf-8"> -->
+			<!-- <style> -->
+				<!-- body { -->
+				  <!-- background-color:#f7e2be; -->
+				<!-- } -->
+				<!-- h1 { -->
+				  <!-- color: black; -->
+				  <!-- text-align: auto; -->
+				<!-- } -->
+				<!-- p { -->
+				  <!-- font-family: verdana; -->
+				  <!-- font-size: 20px; -->
+				<!-- } -->
+			<!-- </style>		 -->
+				<!-- <script> -->
+			<!-- function umrechnen() { -->
+			<!-- var zahl = parseInt(document.getElementById("eingabe").value);  -->
+					
+
+
+<!-- document.getElementById("ausgabe").innerHTML =  -->
+			<!-- "Die Zahl lautet " +  + ". ";									 -->
+				
+				<!-- } -->
+				
+				<!-- function plus() {  -->
+				<!-- var zahl = parseInt(document.getElementById("eingabe").value);  -->
+				
+					<!-- var summe = 0; -->
+				
+				<!-- while(zahl != 0) {	 -->
+				<!-- summe += summe + zahl%2; -->
+				
+				<!-- zahl = Math.floor(zahl/2); -->
+				
+				
+					<!-- } -->
+						
+			<!-- document.getElementById("ausgabe").innerHTML =  -->
+			<!-- "Die Quersumme beträgt " + summe + ". ";					 -->
+						
+					<!-- } -->
+				
+				<!-- </script> -->
+<!-- </head> -->
+<!-- <body> -->
+<!-- <h1>Umrechner</h1> -->
+<!-- <input type="text" id="eingabe"/> -->
+
+	
+<!-- <input type="button" value="Umrechnen" onclick=" plus()"/> -->
+<!-- <p id="ausgabe">Hier kommt die Ausgabe ...</p> -->
+<!-- </body> -->
+<!-- </html> -->
