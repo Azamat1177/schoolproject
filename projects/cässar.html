@@ -1,0 +1,93 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>Caesar</title>
+<style>
+				body {
+				  background-color:#487b7d;
+				}
+				h1 {
+				  color: black;
+				  text-align: auto;
+				}
+				p {
+				  font-family: verdana;
+				  font-size: 17px;
+				  color: white;
+				}
+				h1{
+				color: white;
+				text-align: center;
+				}
+				h2{
+				color: white;
+				text-align: left;
+				}
+</style>		
+
+
+<script>
+function berechne() {
+  var key =  parseInt(document.getElementById("key").value);
+  
+  var text = document.getElementById("eingabe").value;
+  var ausgabe = "";
+  for(var i = 0; i < text.length; i++) {
+    var code = text.charCodeAt(i);
+	code += key;
+	var neu = String.fromCharCode(code);
+	ausgabe += neu;
+  
+  }
+
+  document.getElementById("ausgabe").innerHTML = ausgabe;
+}
+
+
+function entschluesseln() {
+  var key2 =  parseInt(document.getElementById("key2").value);
+  
+  var text = document.getElementById("eingabe1").value;
+  var ausgabe1 = "";
+  for(var i = 0; i < text.length; i++) {
+    var code = text.charCodeAt(i);
+	code -= key2;
+	var neu = String.fromCharCode(code);
+	ausgabe1 += neu;
+  
+  }
+
+  document.getElementById("ausgabe1").innerHTML = ausgabe1;
+}
+
+
+</script>
+</head>
+<body>
+<h1>Cäsar Verschlüsselung</h1><br>
+
+<h2>Verschlüsselung</h2> <br>
+<p>Schlüssel:</p> <input type="number" id="key"/><br>	
+<br>
+<textarea 
+   class="valid" id="eingabe" cols="70"  
+   maxlength="80" rows="8" 
+   required></textarea>
+	<input type="button"  value="Verschluesseln" onclick=" berechne()"/><br><br>
+	
+	<p id="ausgabe"></p> <br>
+
+	<h2>Entschluesselung</h2>
+	<p>Schlüssel:</p> <input type="number" id="key2"/> <br>	
+	<br>
+
+<textarea 
+   class="valid" id="eingabe1" cols="70"  
+   maxlength="80" rows="8" 
+   required></textarea>
+
+<input type="button" value="Entschluesseln" onclick=" entschluesseln()"/> <br>
+
+<p id="ausgabe1"></p> <br>
+</body>
+</html>
