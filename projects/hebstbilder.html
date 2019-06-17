@@ -1,0 +1,90 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Bildergalerie</title>
+	
+<style>
+	body {
+		background-color: lightyellow;
+	}
+	
+	h1 {
+		font-family: Courier New;
+		border: 3px solid green;
+		background-color: lightgreen;
+		text-align: center;
+	}
+	
+	.button {
+		position: absolute;
+		top:45%;
+		left:20;
+		background-color: #555555;
+		border: 3px solid black;
+		color: white;
+		padding: 15px 32px;
+		text-align: center;
+		font-size: 16px;
+	}
+	
+	.buttonRight {
+		position: absolute;
+		top:45%;
+		right:20;
+		background-color: #555555;
+		border: 3px solid black;
+		color: white;
+		padding: 15px 32px;
+		text-align: center;
+		font-size: 16px;
+	}
+	
+	img {
+
+		border: 3px solid black;
+		border-radius: 40px;
+		width: 550px;
+		height: 550px;
+		 object-fit: contain;
+	}
+	
+	
+	
+
+</style>
+	
+<script>
+var index = 0;
+var bilder = ["herbst1.jpg", "herbst2.jpg", "herbst3.jpg", "herbst4.jpg", "herbst5.jpg", "herbst6.jpg"];
+
+function nextImage(){
+	index++;
+	if(index >= bilder.length){
+		index = 0;
+	}
+	document.getElementById("bild").src = bilder[index];
+}
+
+function prevImage(){
+	index--;
+	if(index < 0){
+		index = bilder.length - 1;
+	}
+	document.getElementById("bild").src = bilder[index];
+}
+
+</script>	
+	
+</head>
+
+<body>
+
+<h1>Bilder</h1>
+<input type="button" class="button" value="<<<" onclick="prevImage()">
+<input type="button" class="buttonRight" value=">>>" onclick="nextImage()">
+<center>
+<img id="bild" src="herbst1.jpg">
+</center>
+</body>
+
+</html>
